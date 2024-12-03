@@ -10,32 +10,72 @@
          <p>Великий Новгород</p>
      </div>
  </section>
-{%endblock%}
-
-
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-
-</body>
-</html>
 
 <section class="education">
     <h2>Образование</h2>
     <div class="edublock">
         <p>Школа</p>
+        <p>Год начала: 2018</p>
         <p>Год окончания: 2028</p>
-        <a href="https://www.ranepa"
+        <a href="https://novschool31.gosuslugi.ru" target="_blank">МАОУ СОШ №31</a>
     </div>
-
-
+      <div class="edublock">
+        <p>Кванториум: Програмирование на Python</p>
+        <p>Год окончания: </p>
+        <a href="https://kvantorium53.ru" target="_blank">Кванториум</a>
+    </div>
+    
 
 
 </section>
+<section class="projects">
+    <div class="carousel">
+        <div class="carousel-item">
+         <img src="../static/img/tg.jpg">
+         <div class="carousel-content">
+             <p>Telegram-бот с ChatGPT 4.0</p>
+             <p>Компетенции:</p>
+             <p>-Python3</p>
+             <p>-python-telegram-bot</p>
+             <p>-requests</p>
+              <a href="https://github.com/MRFORSM/bot-gpt" target="_blank" class="button-link">Код на GitHub</a>
+        </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../static/img/zmeyka.png">
+            <div class="carousel-content">
+                <p>Игра "Змейка"</p>
+                <p>Компетенции:</p>
+                <p>-Python3</p>
+                <p>-PyGames</p>
+                <a href="https://github.com/MRFORSM/Snake" target="_blank" class="button-link">Код на GitHub</a>
+            </div>
+            </div>
+        <div class="carousel-item">
+             <img src="../static/img/dice.jpg">
+             <div class="carousel-content">
+                 <p>Сайт с Кубиком</p>
+                 <p>Компетенции:</p>
+                 <p>-Python3</p>
+                 <p>-flask</p>
+                 <p>-HTML</p>
+                 <a href="https://github.com/MRFORSM/Dice" target="_blank" class="button-link">Код на GitHub</a>
+             </div>
+        </div>
+    </div>
+    <button id="prev">Назад</button>
+    <button id="next">Вперёд</button>
+ </section>
+<section class="contact">
+    <div class="info">
+        <p>TG:@MityaFors</p>
+        <p>Phone Number: +79062056560</p>
+    </div>
+</section>
+<script>
+    document.getElementById('prev').addEventListener('click', () =>{
+    document.querySelector('.carousel').scrollBy(-1000,0);});
+    document.getElementById('next').addEventListener('click', () =>{
+    document.querySelector('.carousel').scrollBy(1000,0);});
+</script>
+{%endblock%}
